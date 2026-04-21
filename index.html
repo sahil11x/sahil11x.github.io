@@ -4,24 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sahil Bansod | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
+  <div id="cursor"></div>
+  <canvas id="bgCanvas"></canvas>
+
   <!-- NAVBAR -->
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="logo">Sahil<span>.dev</span></div>
     <ul class="nav-links" id="navLinks">
       <div class="nav-pill" id="navPill"></div>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#home"           class="nav-item active">Home</a></li>
+      <li><a href="#about"          class="nav-item">About</a></li>
+      <li><a href="#skills"         class="nav-item">Skills</a></li>
+      <li><a href="#projects"       class="nav-item">Projects</a></li>
+      <li><a href="#blogs"          class="nav-item">Blogs</a></li>
+      <li><a href="#certifications" class="nav-item">Certifications</a></li>
+      <li><a href="#achievements"   class="nav-item">Achievements</a></li>
+      <li><a href="#experience"     class="nav-item">Experience</a></li>
+      <li><a href="#contact"        class="nav-item">Contact</a></li>
     </ul>
-    <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
-      <i class="fa-solid fa-moon" id="themeIcon"></i>
-    </button>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+        <i class="fa-solid fa-moon" id="themeIcon"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <!-- HERO -->
@@ -29,7 +44,7 @@
     <div class="hero-content">
       <p class="greeting">Hi, I'm</p>
       <h1>Sahil Bansod</h1>
-      <h2 class="typewriter">Student & Aspiring Developer</h2>
+      <h2 class="subtitle">Student &amp; Aspiring Developer</h2>
       <p class="hero-desc">Passionate about programming, problem solving, and building real-world solutions.</p>
       <a href="#projects" class="btn">View My Work</a>
     </div>
@@ -39,14 +54,8 @@
   <section class="section" id="about">
     <h2 class="section-title">About Me</h2>
     <div class="about-card">
-      <p>
-        I'm <strong>Sahil Bansod</strong>, a passionate student developer with a strong foundation in
-        <strong>C</strong>, <strong>Python</strong>, and <strong>Data Structures & Algorithms</strong>.
-        I love solving real-world problems through code and continuously learning new technologies.
-      </p>
-      <p>
-        Currently exploring the world of software development, cloud computing, and competitive programming.
-      </p>
+      <p>I'm <strong>Sahil Bansod</strong>, a passionate student developer with a strong foundation in <strong>C</strong>, <strong>Python</strong>, and <strong>Data Structures &amp; Algorithms</strong>. I love solving real-world problems through code.</p>
+      <p>Currently exploring software development, cloud computing, and competitive programming.</p>
     </div>
   </section>
 
@@ -54,22 +63,10 @@
   <section class="section" id="skills">
     <h2 class="section-title">Skills</h2>
     <div class="skills-grid">
-      <div class="skill-card">
-        <i class="fa-solid fa-c"></i>
-        <span>C</span>
-      </div>
-      <div class="skill-card">
-        <i class="fa-brands fa-python"></i>
-        <span>Python</span>
-      </div>
-      <div class="skill-card">
-        <i class="fa-solid fa-diagram-project"></i>
-        <span>DSA in C</span>
-      </div>
-      <div class="skill-card">
-        <i class="fa-brands fa-aws"></i>
-        <span>AWS (Learning)</span>
-      </div>
+      <div class="skill-card"><i class="fa-solid fa-c"></i><span>C</span></div>
+      <div class="skill-card"><i class="fa-brands fa-python"></i><span>Python</span></div>
+      <div class="skill-card"><i class="fa-solid fa-diagram-project"></i><span>DSA in C</span></div>
+      <div class="skill-card"><i class="fa-brands fa-aws"></i><span>AWS (Learning)</span></div>
     </div>
   </section>
 
@@ -80,59 +77,63 @@
       <div class="project-card">
         <div class="project-icon"><i class="fa-solid fa-road"></i></div>
         <h3>Pothole Detection</h3>
-        <p>A project that detects potholes on roads using image processing techniques, aimed at improving road safety and maintenance reporting.</p>
+        <p>Detects potholes on roads using image processing techniques, aimed at improving road safety and maintenance reporting.</p>
         <a href="https://github.com/sahil11x" target="_blank" class="project-link">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT / SOCIAL FLASHCARDS -->
+  <!-- BLOGS -->
+  <section class="section" id="blogs">
+    <h2 class="section-title">Blogs</h2>
+    <div class="empty-state"><i class="fa-solid fa-pen-nib"></i><p>Coming soon — I'll be sharing my learnings here!</p></div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section" id="certifications">
+    <h2 class="section-title">Certifications</h2>
+    <div class="empty-state"><i class="fa-solid fa-certificate"></i><p>Certifications will be listed here soon.</p></div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section" id="achievements">
+    <h2 class="section-title">Achievements</h2>
+    <div class="empty-state"><i class="fa-solid fa-trophy"></i><p>Achievements will be showcased here soon.</p></div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <h2 class="section-title">Experience</h2>
+    <div class="empty-state"><i class="fa-solid fa-briefcase"></i><p>Experience &amp; internships will appear here.</p></div>
+  </section>
+
+  <!-- CONTACT -->
   <section class="section" id="contact">
     <h2 class="section-title">Connect With Me</h2>
     <div class="contact-grid">
-
       <a href="https://github.com/sahil11x" target="_blank" class="contact-card github">
-        <i class="fa-brands fa-github"></i>
-        <span class="platform">GitHub</span>
-        <span class="handle">@sahil11x</span>
+        <i class="fa-brands fa-github"></i><span class="platform">GitHub</span><span class="handle">@sahil11x</span>
       </a>
-
       <a href="https://www.linkedin.com/in/sahil-bansod-841b40367/" target="_blank" class="contact-card linkedin">
-        <i class="fa-brands fa-linkedin"></i>
-        <span class="platform">LinkedIn</span>
-        <span class="handle">Sahil Bansod</span>
+        <i class="fa-brands fa-linkedin"></i><span class="platform">LinkedIn</span><span class="handle">Sahil Bansod</span>
       </a>
-
       <a href="https://www.instagram.com/sahil__11x/" target="_blank" class="contact-card instagram">
-        <i class="fa-brands fa-instagram"></i>
-        <span class="platform">Instagram</span>
-        <span class="handle">@sahil__11x</span>
+        <i class="fa-brands fa-instagram"></i><span class="platform">Instagram</span><span class="handle">@sahil__11x</span>
       </a>
-
       <a href="https://leetcode.com/u/nXWhit7iaz/" target="_blank" class="contact-card leetcode">
-        <i class="fa-solid fa-code"></i>
-        <span class="platform">LeetCode</span>
-        <span class="handle">nXWhit7iaz</span>
+        <i class="fa-solid fa-code"></i><span class="platform">LeetCode</span><span class="handle">nXWhit7iaz</span>
       </a>
-
       <a href="https://www.codechef.com/users/sahil11x" target="_blank" class="contact-card codechef">
-        <i class="fa-solid fa-utensils"></i>
-        <span class="platform">CodeChef</span>
-        <span class="handle">@sahil11x</span>
+        <i class="fa-solid fa-utensils"></i><span class="platform">CodeChef</span><span class="handle">@sahil11x</span>
       </a>
-
       <div class="contact-card aws">
-        <i class="fa-brands fa-aws"></i>
-        <span class="platform">AWS</span>
-        <span class="handle">Learner</span>
+        <i class="fa-brands fa-aws"></i><span class="platform">AWS</span><span class="handle">Learner</span>
       </div>
-
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p>Designed & Built by <strong>Sahil Bansod</strong> · 2025</p>
+    <p>Designed &amp; Built by <strong>Sahil Bansod</strong> · 2025</p>
   </footer>
 
   <script src="script.js"></script>
