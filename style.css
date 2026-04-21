@@ -68,8 +68,21 @@ a { text-decoration: none; color: inherit; }
   color: var(--text-muted);
   font-size: 0.95rem;
   transition: color 0.2s;
+  position: relative;
+  z-index: 1;
 }
 .nav-links a:hover { color: var(--accent2); }
+
+/* Cursor pill highlight */
+.nav-pill {
+  position: absolute;
+  background: rgba(124, 58, 237, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 999px;
+  pointer-events: none;
+  transition: left 0.18s ease, width 0.18s ease, opacity 0.18s ease;
+  opacity: 0;
+}
 
 .theme-toggle {
   background: var(--card);
