@@ -374,6 +374,8 @@ a { text-decoration: none; color: inherit; }
 .contact-card .handle { font-size: 0.78rem; color: var(--text-muted); }
 .contact-card:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(124,58,237,0.15); }
 
+.instagram i { color: #e1306c; } .instagram:hover { border-color: #e1306c; }
+.twitter i { color: #ffffff; } .twitter:hover { border-color: #ffffff; }
 .github i { color: #e0e0e0; } .github:hover { border-color: #e0e0e0; }
 .linkedin i { color: #0a66c2; } .linkedin:hover { border-color: #0a66c2; }
 .hackerrank i { color: #2ec866; } .hackerrank:hover { border-color: #2ec866; }
