@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sahil Bansod | Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Sahil<span>.dev</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+      <i class="fa-solid fa-moon" id="themeIcon"></i>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="greeting">Hi, I'm</p>
+      <h1>Sahil Bansod</h1>
+      <h2 class="typewriter">Student & Aspiring Developer</h2>
+      <p class="hero-desc">Passionate about programming, problem solving, and building real-world solutions.</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-card">
+      <p>
+        I'm <strong>Sahil Bansod</strong>, a passionate student developer with a strong foundation in
+        <strong>C</strong>, <strong>Python</strong>, and <strong>Data Structures & Algorithms</strong>.
+        I love solving real-world problems through code and continuously learning new technologies.
+      </p>
+      <p>
+        Currently exploring the world of software development, cloud computing, and competitive programming.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <i class="fa-solid fa-c"></i>
+        <span>C</span>
+      </div>
+      <div class="skill-card">
+        <i class="fa-brands fa-python"></i>
+        <span>Python</span>
+      </div>
+      <div class="skill-card">
+        <i class="fa-solid fa-diagram-project"></i>
+        <span>DSA in C</span>
+      </div>
+      <div class="skill-card">
+        <i class="fa-brands fa-aws"></i>
+        <span>AWS (Learning)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-icon"><i class="fa-solid fa-road"></i></div>
+        <h3>Pothole Detection</h3>
+        <p>A project that detects potholes on roads using image processing techniques, aimed at improving road safety and maintenance reporting.</p>
+        <a href="https://github.com/sahil11x" target="_blank" class="project-link">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / SOCIAL FLASHCARDS -->
+  <section class="section" id="contact">
+    <h2 class="section-title">Connect With Me</h2>
+    <div class="contact-grid">
+
+      <a href="https://github.com/sahil11x" target="_blank" class="contact-card github">
+        <i class="fa-brands fa-github"></i>
+        <span class="platform">GitHub</span>
+        <span class="handle">@sahil11x</span>
+      </a>
+
+      <a href="https://www.linkedin.com/in/sahil-bansod-841b40367/" target="_blank" class="contact-card linkedin">
+        <i class="fa-brands fa-linkedin"></i>
+        <span class="platform">LinkedIn</span>
+        <span class="handle">Sahil Bansod</span>
+      </a>
+
+      <a href="https://www.instagram.com/sahil__11x/" target="_blank" class="contact-card instagram">
+        <i class="fa-brands fa-instagram"></i>
+        <span class="platform">Instagram</span>
+        <span class="handle">@sahil__11x</span>
+      </a>
+
+      <a href="https://leetcode.com/u/nXWhit7iaz/" target="_blank" class="contact-card leetcode">
+        <i class="fa-solid fa-code"></i>
+        <span class="platform">LeetCode</span>
+        <span class="handle">nXWhit7iaz</span>
+      </a>
+
+      <a href="https://www.codechef.com/users/sahil11x" target="_blank" class="contact-card codechef">
+        <i class="fa-solid fa-utensils"></i>
+        <span class="platform">CodeChef</span>
+        <span class="handle">@sahil11x</span>
+      </a>
+
+      <div class="contact-card aws">
+        <i class="fa-brands fa-aws"></i>
+        <span class="platform">AWS</span>
+        <span class="handle">Learner</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Designed & Built by <strong>Sahil Bansod</strong> · 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
