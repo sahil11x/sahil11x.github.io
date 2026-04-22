@@ -173,7 +173,12 @@ navLinks.addEventListener('mouseleave', () => {
   else pill.style.opacity = '0';
 });
 
-// ===== ACTIVE TAB ON SCROLL =====
+// ===== SCROLL TO TOP =====
+const scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+  scrollTopBtn.classList.toggle('show', window.scrollY > 300);
+});
+scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 const sections = document.querySelectorAll('section[id]');
 
 sections.forEach(s => {

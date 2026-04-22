@@ -635,6 +635,31 @@ a { text-decoration: none; color: inherit; }
 /* ===== FOOTER ===== */
 footer { text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border); position: relative; z-index: 1; }
 
+/* ===== SCROLL TO TOP ===== */
+#scrollTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 4px 12px rgba(124,58,237,0.4);
+}
+#scrollTop:hover {
+  background: var(--accent2);
+  transform: translateY(-3px);
+}
+#scrollTop.show { display: flex; }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .nav-links {
