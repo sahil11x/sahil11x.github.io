@@ -323,6 +323,7 @@ a { text-decoration: none; color: inherit; }
 }
 [data-theme="light"] .skill-card { background: rgba(255,255,255,0.6); }
 .skill-card i { font-size: 2rem; color: var(--accent2); }
+.skill-card i.devicon-c-plain { color: #a8b9cc !important; }
 .skill-card:hover { border-color: var(--accent); transform: translateY(-4px); color: var(--text); }
 
 /* ===== PROJECTS ===== */
@@ -387,6 +388,76 @@ a { text-decoration: none; color: inherit; }
 .udemy i { color: #a435f0; } .udemy:hover { border-color: #a435f0; }
 .coderlegion i { color: #00bcd4; } .coderlegion:hover { border-color: #00bcd4; }
 .meetup i { color: #f65858; } .meetup:hover { border-color: #f65858; }
+
+/* ===== ACHIEVEMENTS ===== */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.achieve-card {
+  background: rgba(26,26,26,0.6);
+  border: 1px solid var(--border);
+  border-left: 4px solid #8b5cf6;
+  border-radius: 12px;
+  padding: 1.8rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+[data-theme="light"] .achieve-card { background: rgba(255,255,255,0.6); }
+.achieve-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(139,92,246,0.2);
+}
+
+.achieve-icon {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  background: rgba(139,92,246,0.1);
+  border: 1px solid rgba(139,92,246,0.3);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #2ec866;
+}
+
+.achieve-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.achieve-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.achieve-org {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #a78bfa;
+}
+
+.achieve-stars i {
+  color: #fbbf24;
+  font-size: 0.95rem;
+}
+
+.achieve-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
 
 /* ===== CERTIFICATIONS ===== */
 .cert-grid {
