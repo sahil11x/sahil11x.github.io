@@ -256,6 +256,7 @@ a { text-decoration: none; color: inherit; }
   transition: background 0.2s, transform 0.2s;
 }
 .btn:hover { background: var(--accent2); transform: translateY(-2px); }
+.btn-oval { border-radius: 999px; padding: 0.75rem 2.5rem; }
 
 /* ===== SECTIONS ===== */
 .section { padding: 5rem 2rem; max-width: 1000px; margin: 0 auto; }
@@ -392,12 +393,9 @@ a { text-decoration: none; color: inherit; }
 .github i { color: #e0e0e0; } .github:hover { border-color: #e0e0e0; }
 .linkedin i { color: #0a66c2; } .linkedin:hover { border-color: #0a66c2; }
 .hackerrank i { color: #2ec866; } .hackerrank:hover { border-color: #2ec866; }
-.credly i { color: #ff6b00; } .credly:hover { border-color: #ff6b00; }
 .codechef i { color: #a0785a; } .codechef:hover { border-color: #a0785a; }
 .leetcode i { color: #ffa116; } .leetcode:hover { border-color: #ffa116; }
-.devto i { color: #ffffff; } .devto:hover { border-color: #ffffff; }
 .aws i { color: #ff9900; } .aws:hover { border-color: #ff9900; }
-.udemy i { color: #a435f0; } .udemy:hover { border-color: #a435f0; }
 .coderlegion i { color: #00bcd4; } .coderlegion:hover { border-color: #00bcd4; }
 .meetup i { color: #f65858; } .meetup:hover { border-color: #f65858; }
 
