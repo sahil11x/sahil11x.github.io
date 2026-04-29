@@ -4,10 +4,16 @@ const words = ['Student', 'Developer', 'Problem Solver', 'DSA Enthusiast'];
 let wi = 0, ci = 0, deleting = false;
 function type() {
   const word = words[wi];
-  typingEl.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
-  if (!deleting && ci > word.length) { deleting = true; setTimeout(type, 1200); return; }
-  if (deleting && ci < 0) { deleting = false; wi = (wi + 1) % words.length; setTimeout(type, 400); return; }
-  setTimeout(type, deleting ? 60 : 100);
+  if (!deleting) {
+    typingEl.textContent = word.slice(0, ci);
+    ci++;
+    if (ci > word.length) { deleting = true; setTimeout(type, 1200); return; }
+  } else {
+    typingEl.textContent = word.slice(0, ci);
+    ci--;
+    if (ci < 0) { deleting = false; ci = 0; wi = (wi + 1) % words.length; setTimeout(type, 400); return; }
+  }
+  setTimeout(type, deleting ? 80 : 130);
 }
 type();
 

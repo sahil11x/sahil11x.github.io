@@ -244,8 +244,8 @@ a { text-decoration: none; color: inherit; }
   background-clip: text;
   margin-bottom: 0.5rem;
 }
-.subtitle { font-size: clamp(1rem, 2.5vw, 1.4rem); color: var(--text-muted); margin-bottom: 1rem; font-weight: 400; }
-.subtitle::after { content: '|'; animation: blink 0.7s infinite; margin-left: 2px; color: var(--accent2); }
+.subtitle { font-size: clamp(1rem, 2.5vw, 1.4rem); margin-bottom: 1rem; font-weight: 700; background: linear-gradient(90deg, var(--accent2), #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.subtitle::after { content: '|'; animation: blink 0.7s infinite; margin-left: 2px; color: #ec4899; -webkit-text-fill-color: #ec4899; }
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 .hero-desc { color: var(--text-muted); font-size: 1rem; margin-bottom: 2rem; line-height: 1.7; }
 .btn {
