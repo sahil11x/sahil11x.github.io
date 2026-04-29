@@ -225,6 +225,15 @@ a { text-decoration: none; color: inherit; }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+#rainCanvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.18;
+}
+
 /* ===== HERO ===== */
 .hero {
   min-height: 100vh;
@@ -232,8 +241,10 @@ a { text-decoration: none; color: inherit; }
   background: transparent;
   text-align: center;
   padding: 6rem 2rem 2rem;
+  position: relative;
+  overflow: hidden;
 }
-.hero-content { max-width: 650px; }
+.hero-content { max-width: 650px; position: relative; z-index: 2; }
 .greeting { color: var(--accent2); font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.5rem; }
 .hero h1 {
   font-size: clamp(2.5rem, 6vw, 4.5rem);
