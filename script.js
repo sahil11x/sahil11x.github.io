@@ -7,7 +7,7 @@ let drops = [];
 
 function initRain() {
   const hero = document.getElementById('home');
-  rainCanvas.width = hero.offsetWidth;
+  rainCanvas.width = window.innerWidth;
   rainCanvas.height = hero.offsetHeight;
   const cols = Math.floor(rainCanvas.width / fontSize);
   drops = Array(cols).fill(1);
