@@ -1,3 +1,32 @@
+// ===== PARTICLE EXPLOSION =====
+document.addEventListener('click', e => {
+  const count = 18;
+  for (let i = 0; i < count; i++) {
+    const p = document.createElement('span');
+    p.style.cssText = `
+      position: fixed;
+      left: ${e.clientX}px;
+      top: ${e.clientY}px;
+      width: ${Math.random() * 6 + 4}px;
+      height: ${Math.random() * 6 + 4}px;
+      border-radius: 50%;
+      background: ${['#a78bfa','#8b5cf6','#ec4899','#ffffff'][Math.floor(Math.random()*4)]};
+      pointer-events: none;
+      z-index: 999998;
+      transform: translate(-50%, -50%);
+    `;
+    document.body.appendChild(p);
+    const angle = (i / count) * 2 * Math.PI;
+    const dist = Math.random() * 80 + 40;
+    const tx = Math.cos(angle) * dist;
+    const ty = Math.sin(angle) * dist;
+    p.animate([
+      { transform: 'translate(-50%, -50%) scale(1)', opacity: 1 },
+      { transform: `translate(calc(-50% + ${tx}px), calc(-50% + ${ty}px)) scale(0)`, opacity: 0 }
+    ], { duration: 600, easing: 'ease-out' }).onfinish = () => p.remove();
+  }
+});
+
 // ===== TYPING ANIMATION =====
 const typingEl = document.getElementById('typingText');
 const words = ['Student', 'Developer', 'Problem Solver', 'DSA Enthusiast'];
