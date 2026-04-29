@@ -1,13 +1,3 @@
-// ===== SCROLL REVEAL =====
-function revealOnScroll() {
-  document.querySelectorAll('.reveal').forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 60) el.classList.add('visible');
-  });
-}
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
-
 // ===== READING PROGRESS BAR =====
 const progressBar = document.getElementById('progressBar');
 window.addEventListener('scroll', () => {
