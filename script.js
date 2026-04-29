@@ -1,15 +1,3 @@
-// ===== SCROLL REVEAL =====
-const revealEls = document.querySelectorAll('.reveal');
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.05, rootMargin: '0px 0px -50px 0px' });
-revealEls.forEach(el => revealObserver.observe(el));
-
 // ===== READING PROGRESS BAR =====
 const progressBar = document.getElementById('progressBar');
 window.addEventListener('scroll', () => {
