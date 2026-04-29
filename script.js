@@ -1,3 +1,16 @@
+// ===== TYPING ANIMATION =====
+const typingEl = document.getElementById('typingText');
+const words = ['Student', 'Developer', 'Problem Solver', 'DSA Enthusiast'];
+let wi = 0, ci = 0, deleting = false;
+function type() {
+  const word = words[wi];
+  typingEl.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
+  if (!deleting && ci > word.length) { deleting = true; setTimeout(type, 1200); return; }
+  if (deleting && ci < 0) { deleting = false; wi = (wi + 1) % words.length; setTimeout(type, 400); return; }
+  setTimeout(type, deleting ? 60 : 100);
+}
+type();
+
 // ===== READING PROGRESS BAR =====
 const progressBar = document.getElementById('progressBar');
 window.addEventListener('scroll', () => {
