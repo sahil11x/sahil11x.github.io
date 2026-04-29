@@ -1,3 +1,34 @@
+// ===== CODE RAIN =====
+const rainCanvas = document.getElementById('rainCanvas');
+const rainCtx = rainCanvas.getContext('2d');
+const chars = '01';
+const fontSize = 14;
+let drops = [];
+
+function initRain() {
+  const hero = document.getElementById('home');
+  rainCanvas.width = hero.offsetWidth;
+  rainCanvas.height = hero.offsetHeight;
+  const cols = Math.floor(rainCanvas.width / fontSize);
+  drops = Array(cols).fill(1);
+}
+
+function drawRain() {
+  rainCtx.fillStyle = 'rgba(0,0,0,0.05)';
+  rainCtx.fillRect(0, 0, rainCanvas.width, rainCanvas.height);
+  rainCtx.font = fontSize + 'px monospace';
+  drops.forEach((y, i) => {
+    rainCtx.fillStyle = i % 2 === 0 ? 'rgba(167,139,250,0.9)' : 'rgba(236,72,153,0.6)';
+    const char = chars[Math.floor(Math.random() * chars.length)];
+    rainCtx.fillText(char, i * fontSize, y * fontSize);
+    if (y * fontSize > rainCanvas.height && Math.random() > 0.975) drops[i] = 0;
+    drops[i]++;
+  });
+}
+
+window.addEventListener('load', () => { initRain(); setInterval(drawRain, 50); });
+window.addEventListener('resize', initRain);
+
 // ===== PARTICLE EXPLOSION =====
 document.addEventListener('click', e => {
   const count = 18;
