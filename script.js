@@ -7,7 +7,7 @@ const revealObserver = new IntersectionObserver((entries) => {
       revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.05, rootMargin: '0px 0px -50px 0px' });
 revealEls.forEach(el => revealObserver.observe(el));
 
 // ===== READING PROGRESS BAR =====
