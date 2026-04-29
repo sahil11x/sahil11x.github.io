@@ -14,11 +14,11 @@ function initRain() {
 }
 
 function drawRain() {
-  rainCtx.fillStyle = 'rgba(0,0,0,0.05)';
+  rainCtx.fillStyle = 'rgba(13,13,13,0.15)';
   rainCtx.fillRect(0, 0, rainCanvas.width, rainCanvas.height);
-  rainCtx.font = fontSize + 'px monospace';
+  rainCtx.font = 'bold ' + fontSize + 'px monospace';
   drops.forEach((y, i) => {
-    rainCtx.fillStyle = i % 2 === 0 ? 'rgba(167,139,250,0.9)' : 'rgba(236,72,153,0.6)';
+    rainCtx.fillStyle = i % 2 === 0 ? '#a78bfa' : '#ec4899';
     const char = chars[Math.floor(Math.random() * chars.length)];
     rainCtx.fillText(char, i * fontSize, y * fontSize);
     if (y * fontSize > rainCanvas.height && Math.random() > 0.975) drops[i] = 0;
