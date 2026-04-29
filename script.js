@@ -6,8 +6,9 @@ const fontSize = 14;
 let drops = [];
 
 function initRain() {
-  rainCanvas.width = window.innerWidth;
-  rainCanvas.height = window.innerHeight;
+  const hero = document.getElementById('home');
+  rainCanvas.width = hero.offsetWidth;
+  rainCanvas.height = hero.offsetHeight;
   const cols = Math.floor(rainCanvas.width / fontSize);
   drops = Array(cols).fill(1);
 }
