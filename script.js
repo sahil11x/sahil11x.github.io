@@ -10,7 +10,7 @@ function initRain() {
   rainCanvas.width = hero.offsetWidth;
   rainCanvas.height = hero.offsetHeight;
   const cols = Math.floor(rainCanvas.width / fontSize);
-  drops = Array(cols).fill(1);
+  drops = Array.from({ length: cols }, () => Math.floor(Math.random() * -50));
 }
 
 function drawRain() {
