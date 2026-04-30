@@ -1,3 +1,33 @@
+// ===== TAB VISIBILITY =====
+const originalTitle = document.title;
+document.addEventListener('visibilitychange', () => {
+  document.title = document.hidden ? '👀 Come Back! | Sahil Bansod' : originalTitle;
+});
+
+// ===== TAB VISIBILITY =====
+const originalTitle = document.title;
+const awayTitles = [
+  '👀 Come Back! | Sahil Bansod',
+  '😢 You left me! | Sahil Bansod',
+  '🔥 Don\'t miss out! | Sahil Bansod',
+  '⚡ Still here? | Sahil Bansod',
+  '🚀 Something cool awaits! | Sahil Bansod',
+];
+let awayInterval;
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    let i = 0;
+    document.title = awayTitles[i];
+    awayInterval = setInterval(() => {
+      i = (i + 1) % awayTitles.length;
+      document.title = awayTitles[i];
+    }, 2000);
+  } else {
+    clearInterval(awayInterval);
+    document.title = originalTitle;
+  }
+});
+
 // ===== CODE RAIN =====
 const rainCanvas = document.getElementById('rainCanvas');
 const rainCtx = rainCanvas.getContext('2d');
