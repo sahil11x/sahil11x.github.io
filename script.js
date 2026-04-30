@@ -1,11 +1,5 @@
 // ===== TAB VISIBILITY =====
 const originalTitle = document.title;
-document.addEventListener('visibilitychange', () => {
-  document.title = document.hidden ? '👀 Come Back! | Sahil Bansod' : originalTitle;
-});
-
-// ===== TAB VISIBILITY =====
-const originalTitle = document.title;
 const awayTitles = [
   '👀 Come Back! | Sahil Bansod',
   '😢 You left me! | Sahil Bansod',
